@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".LoginActivity">
+
+    <!-- 返回按钮 -->
+    <TextView
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="返回"
+        android:textSize="16sp"
+        android:textColor="#007AFF"/>
+
+    <!-- 标题 -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="登录账号"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:gravity="center"/>
+
+    <!-- 手机号码输入框 -->
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="输入手机号"
+        android:background="@drawable/rounded_edit_text"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:inputType="phone"
+        android:digits="0123456789"/>
+
+    <!-- 验证码输入框和获取验证码按钮 -->
+    <LinearLayout
+        android:id="@+id/verification_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_phone"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <EditText
+            android:id="@+id/et_verification_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:hint="验证码"
+            android:background="@drawable/rounded_edit_text"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:inputType="number"
+            android:digits="0123456789"/>
+
+        <Button
+            android:id="@+id/btn_get_verification_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/rounded_button"
+            android:text="获取验证码"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+    <!-- 登录按钮 -->
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/verification_layout"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_button"
+        android:text="立即登录"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:padding="16dp"/>
+
+    <!-- 跳过登录按钮 -->
+    <Button
+        android:id="@+id/btn_skip_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_login"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:text="跳过登录"
+        android:textColor="#007AFF"
+        android:textSize="16sp"
+        android:padding="16dp"/>
+</RelativeLayout>

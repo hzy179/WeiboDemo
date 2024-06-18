@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">weibo</string>
+    <string name="ih_">iH微博</string>
+    <string name="some_id">发你想说</string>
+    <string name="some_id_2">声明与条款</string>
+    <string name="ih_2">
+        欢迎使用 iH微博 我们将严格遵守相关法律法规和隐私政策保护您的个人隐私，请您阅读并同意
+        <font color='#0D84FF'>《用户协议》</font> 与 <font color='#0D84FF'>《隐私政策》</font>
+    </string>
+
+
+</resources>

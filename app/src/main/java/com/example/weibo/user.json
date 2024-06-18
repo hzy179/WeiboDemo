@@ -1,0 +1,11 @@
+{
+  "code": 200,
+  "msg": "success",
+  "data": {
+    "id": null,
+    "username": null,
+    "phone": null,
+    "avatar": null,
+    "loginStatus": false
+  }
+}

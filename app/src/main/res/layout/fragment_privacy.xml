@@ -1,0 +1,87 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/some_id">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/privacy_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="268dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/privacy_background"
+            android:clipToOutline="true"
+            android:elevation="4dp"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="8dp"
+                android:text="@string/some_id_2"
+                android:textAppearance="@style/some_id_2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/privacy_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/ih_2"
+                android:textAppearance="@style/ih_2"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/disagree_text"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="不同意"
+                android:textColor="@color/grey"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/privacy_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/agree_text" />
+
+            <TextView
+                android:id="@+id/agree_text"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="@color/blue"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="同意并使用"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/disagree_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

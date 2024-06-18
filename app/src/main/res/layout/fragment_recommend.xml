@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:clipToPadding="false"
+            android:layout_centerInParent="true"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <FrameLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <include layout="@layout/layout_loading"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/error_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <include layout="@layout/layout_error"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="暂无内容"
+        android:textColor="#A9A9A9"
+        android:textSize="16sp"
+        android:visibility="gone"/>
+</RelativeLayout>
